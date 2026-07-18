@@ -80,7 +80,6 @@ The investigation follows the standard incident response lifecycle:
 
 ## Repository Structure
 
-
 ---
 
 ## MITRE ATT&CK Techniques Covered
@@ -115,10 +114,6 @@ The investigation follows the standard incident response lifecycle:
 
 ![Sysmon Analysis](Screenshots/sysmon-event.png)
 
-### Microsoft Sentinel Detection
-
-![Sentinel Query](Screenshots/sentinel-query.png)
-
 ----
 
 ## Microsoft Sentinel Detection Engineering
@@ -139,6 +134,16 @@ SecurityEvent
 | where EventID == 4688
 | where CommandLine contains "powershell"
 | project TimeGenerated, Computer, Account, CommandLine
+
+----
+
+### Detection Mapping
+
+| Detection | MITRE ATT&CK |
+|---|---|
+| Suspicious PowerShell | T1059.001 |
+| Process Creation | T1057 |
+| Failed Authentication | T1110 |
 
 ----
 
