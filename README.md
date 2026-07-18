@@ -148,6 +148,18 @@ MITRE ATT&CK mapping:
 
 ----
 
+## Evidence Screenshots
+
+### Sysmon Event ID 1 - Process Creation
+
+![Sysmon Event ID 1](Evidence/Sysmon/Screenshots/sysmon-event-id-1.png)
+
+### Sysmon Process Creation Investigation
+
+![Sysmon Process Creation](Evidence/Sysmon/Screenshots/sysmon-process-create.png)
+
+----
+
 # Author
 
 **Thabo Sakonta**
