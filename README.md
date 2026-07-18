@@ -121,6 +121,27 @@ The investigation follows the standard incident response lifecycle:
 
 ----
 
+## Microsoft Sentinel Detection Engineering
+
+The investigation was extended into Microsoft Sentinel using KQL detection logic.
+
+Implemented detections:
+
+- Suspicious PowerShell execution
+- Failed login detection
+- Process creation monitoring
+- Threat hunting queries
+
+Example KQL Detection:
+
+```kql
+SecurityEvent
+| where EventID == 4688
+| where CommandLine contains "powershell"
+| project TimeGenerated, Computer, Account, CommandLine
+
+----
+
 ## Sysmon Endpoint Monitoring
 
 Sysmon was deployed on the Windows endpoint to collect detailed security telemetry.
