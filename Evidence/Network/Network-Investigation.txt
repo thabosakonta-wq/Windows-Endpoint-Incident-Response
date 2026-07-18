@@ -1,0 +1,24 @@
+Network Investigation Report
+
+Host:
+WIN-ENDPOINT-01
+
+Tools Used:
+
+- Wireshark
+- Nmap
+- TCP analysis
+
+Analysis:
+
+Network connections were reviewed to identify suspicious communication patterns.
+
+Checks performed:
+
+- Unknown external IP addresses
+- Unusual ports
+- Suspicious outbound traffic
+
+Result:
+
+No confirmed malicious communication identified.

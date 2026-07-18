@@ -1,0 +1,26 @@
+Sysmon Event ID 1
+Process Creation
+
+Host:
+WIN-ENDPOINT-01
+
+Image:
+powershell.exe
+
+Parent Image:
+explorer.exe
+
+Command Line:
+powershell.exe -ExecutionPolicy Bypass
+
+Integrity Level:
+Medium
+
+Investigation Notes:
+
+The process creation event was reviewed to identify suspicious execution behaviour.
+
+MITRE Mapping:
+
+T1059.001
+Command and Scripting Interpreter: PowerShell

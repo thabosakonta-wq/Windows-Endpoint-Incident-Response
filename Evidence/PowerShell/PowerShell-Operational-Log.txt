@@ -1,0 +1,26 @@
+PowerShell Operational Log
+
+Provider:
+Microsoft-Windows-PowerShell
+
+Event:
+4104 Script Block Logging
+
+Host:
+WIN-ENDPOINT-01
+
+Activity:
+
+PowerShell script execution detected.
+
+Analyst Review:
+
+The script execution was analysed for:
+- Obfuscation
+- Suspicious commands
+- External connections
+- Persistence mechanisms
+
+Result:
+
+Activity documented for further SOC investigation.

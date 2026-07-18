@@ -1,0 +1,15 @@
+// Microsoft Sentinel KQL Detection
+// Suspicious PowerShell Execution
+
+SecurityEvent
+| where EventID == 4688
+| where Process has "powershell.exe"
+| where CommandLine contains "-EncodedCommand"
+   or CommandLine contains "ExecutionPolicy Bypass"
+| project
+    TimeGenerated,
+    Computer,
+    Account,
+    Process,
+    CommandLine
+| order by TimeGenerated desc

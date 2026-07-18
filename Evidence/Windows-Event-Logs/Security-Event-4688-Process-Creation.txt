@@ -1,0 +1,29 @@
+Windows Security Event ID 4688
+Process Creation Event
+
+Computer:
+WIN-ENDPOINT-01
+
+Event ID:
+4688
+
+Time:
+2026-07-18 09:15:22
+
+New Process Name:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Parent Process:
+explorer.exe
+
+User:
+THABO\Analyst
+
+Command Line:
+powershell.exe -ExecutionPolicy Bypass
+
+Analysis:
+
+PowerShell execution was identified and reviewed as part of the incident investigation.
+
+The command line parameters required additional analysis due to potential abuse patterns.
