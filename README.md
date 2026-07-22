@@ -1,88 +1,47 @@
-# Windows Endpoint Incident Response Lab
+# Windows Endpoint Incident Response
 
 ## Overview
 
-This project demonstrates a practical Security Operations Center (SOC) incident response workflow focused on investigating and responding to suspicious activity on a Windows endpoint.
+This repository documents a complete Windows Endpoint Incident Response investigation involving malware detection, persistence hunting, system remediation, and post-incident validation.
 
-The lab simulates a real-world security incident involving suspicious PowerShell execution, endpoint investigation, evidence collection, detection logic development, and remediation.
+## Incident
 
----
+Trojan.FakeChrome
+PUP.Optional.DriverPack
 
-## Incident Scenario
+## Skills Demonstrated
 
-A security alert was generated after unusual PowerShell activity was detected on a Windows workstation.
-
-The SOC analyst was responsible for:
-
-- Validating the alert
-- Investigating endpoint activity
-- Reviewing Windows event logs
-- Analysing suspicious processes
-- Identifying indicators of compromise (IOCs)
-- Mapping attacker behaviour to MITRE ATT&CK
-- Documenting containment and recovery actions
-
----
-
-## Investigation Objectives
-
-- Determine whether malicious activity occurred
-- Identify affected systems and processes
-- Collect forensic evidence
-- Analyse attacker techniques
-- Develop detection logic
-- Document incident response actions
-
----
-
-## Tools Used
-
-### Endpoint Analysis
-
-- Windows Event Viewer
-- PowerShell Logs
-- Sysmon
-- Microsoft Defender
-
-### Network Analysis
-
-- Wireshark
-- Nmap
-- TCP/IP analysis
-
-### Threat Detection
-
-- Microsoft Sentinel
-- KQL
-- Sigma Rules
-- MITRE ATT&CK Framework
-
-### Documentation
-
-- Incident Response Reports
-- Evidence Collection
-- Investigation Timeline
-
----
-
-## Incident Response Process
-
-The investigation follows the standard incident response lifecycle:
-
-1. Preparation
-2. Identification
-3. Containment
-4. Eradication
-5. Recovery
-6. Lessons Learned
-
----
+- Malware Investigation
+- Endpoint Detection
+- Persistence Hunting
+- Windows Registry Analysis
+- Scheduled Task Analysis
+- Microsoft Defender Validation
+- Malwarebytes Investigation
+- Windows System Repair
+- MITRE ATT&CK Mapping
+- Incident Documentation
 
 ## Repository Structure
 
----
+Incident-Report/
+Detection-Logic/
+Evidence/
+Screenshots/
 
-## MITRE ATT&CK Techniques Covered
+## Tools Used
+
+- Malwarebytes
+- Microsoft Defender
+- PowerShell
+- DISM
+- SFC
+- Registry Editor
+- Task Scheduler
+
+## MITRE ATT&CK
+
+Tactic and technique mapping available under Detection-Logic.
 
 | Technique | ID |
 |---|---|
