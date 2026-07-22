@@ -1,29 +1,71 @@
-# Containment Report
+# Containment
 
 ## Objective
 
-Prevent further malicious activity while preserving evidence.
+Prevent additional malicious activity while preserving evidence for investigation.
 
 ---
 
-## Containment Actions
+## Immediate Actions
 
-The following actions were performed:
+The following containment actions were performed:
 
-- Isolated affected endpoint from the network
-- Disabled suspicious processes
-- Collected security logs
-- Preserved forensic evidence
-- Reviewed user activity
-
----
-
-## Analyst Notes
-
-Containment was performed before remediation to prevent possible lateral movement or additional compromise.
+- Malwarebytes quarantine executed
+- Microsoft Defender status verified
+- Endpoint remained isolated from additional malware execution
+- Registry startup entries reviewed
+- Suspicious persistence investigated
 
 ---
 
-## Status
+## Registry Persistence Removal
 
-Endpoint contained successfully.
+An orphaned startup registry entry was discovered.
+
+Registry Location:
+
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+
+Entry:
+
+Gaijin.Net Updater
+
+Validation confirmed the executable no longer existed.
+
+PowerShell command used:
+
+Test-Path
+
+Result:
+
+False
+
+The startup entry was removed.
+
+---
+
+## Scheduled Tasks
+
+Scheduled Tasks were inspected for persistence.
+
+No malicious scheduled tasks were identified.
+
+---
+
+## Service Validation
+
+Verified the following services:
+
+- Malwarebytes Service
+- Microsoft Defender Service
+- Npcap Service
+
+No unauthorized services were identified.
+
+---
+
+## Containment Result
+
+No active persistence remained following registry cleanup.
+
+The endpoint was ready for eradication activities.
