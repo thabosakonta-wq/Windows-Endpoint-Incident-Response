@@ -11,6 +11,27 @@ On 18 July 2026, Malwarebytes detected multiple malicious and potentially unwant
 
 A total of **43 malicious objects** were detected during the initial scan.
 
+### Malware Detection Summary
+
+A manual Malwarebytes Threat Scan identified **43 malicious and potentially unwanted artifacts** affecting the endpoint.
+
+The detections included:
+
+- Trojan.FakeChrome
+- Trojan.SearcherBar
+- PUP.Optional.DriverPack
+- PUP.Optional.InternetStart
+
+The identified threats affected:
+
+- Registry Run Keys
+- Startup persistence
+- Browser configuration
+- Local application folders
+- Microsoft Edge user profile data
+
+All detected threats were successfully quarantined and validated during the eradication phase.
+
 ---
 
 ## Investigation
@@ -51,6 +72,14 @@ The final Malwarebytes Deep Scan reported:
 - Threats Quarantined: 0
 
 The endpoint was returned to a trusted operational state.
+
+### Microsoft Defender Validation
+
+Windows Security recognised both Malwarebytes and Microsoft Defender.
+
+During post-remediation validation, the Microsoft Defender Antivirus service remained stopped while Malwarebytes was registered as the active endpoint protection solution.
+
+No evidence was found that Microsoft Defender had been disabled through Group Policy. Windows Security remained operational throughout the investigation.
 
 ---
 

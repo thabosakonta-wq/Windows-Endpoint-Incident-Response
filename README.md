@@ -65,83 +65,79 @@ Tactic and technique mapping available under Detection-Logic.
 
 ## Investigation Screenshots
 
-### Windows Event Investigation
+### Malwarebytes Detection
 
-![Windows Event Investigation](Screenshots/event-viewer.png)
+Threat Scan Summary
 
-### Sysmon Process Analysis
+![Threat Scan](Screenshots/Malwarebytes/01-Threat-Scan.jpg)
 
-![Sysmon Analysis](Screenshots/sysmon-event.png)
+Detected Threats
 
-----
+![Detected Threats](Screenshots/Malwarebytes/02-Detected-Threats.jpg)
 
-## Microsoft Sentinel Detection Engineering
+Threats Quarantined
 
-The investigation was extended into Microsoft Sentinel using KQL detection logic.
+![Quarantine](Screenshots/Malwarebytes/03-Quarantine.jpg)
 
-Implemented detections:
+---
 
-- Suspicious PowerShell execution
-- Failed login detection
-- Process creation monitoring
-- Threat hunting queries
+### Microsoft Defender Validation
 
-Example KQL Detection:
+Windows Security Dashboard
 
-```kql
-SecurityEvent
-| where EventID == 4688
-| where CommandLine contains "powershell"
-| project TimeGenerated, Computer, Account, CommandLine
+![Windows Security](Screenshots/Defender/01-Windows-Security.jpg)
 
-----
+Defender Status (PowerShell)
 
-### Detection Mapping
+![Defender Status](Screenshots/Defender/02-Defender-Status-PowerShell.jpg)
 
-| Detection | MITRE ATT&CK |
-|---|---|
-| Suspicious PowerShell | T1059.001 |
-| Process Creation | T1057 |
-| Failed Authentication | T1110 |
+Defender Service
 
-----
+![WinDefend Service](Screenshots/Defender/03-WinDefend-Service.jpg)
 
-## Sysmon Endpoint Monitoring
+---
 
-Sysmon was deployed on the Windows endpoint to collect detailed security telemetry.
+### PowerShell Investigation
 
-Collected evidence includes:
+Startup Registry Review
 
-- Process creation monitoring (Event ID 1)
-- Parent-child process relationships
-- Command-line analysis
-- SHA256 file hashes
-- User and integrity level analysis
+![Startup Registry](Screenshots/PowerShell/01-Startup-Registry.jpg)
 
-Example investigation:
+Scheduled Tasks Review
 
-A Firefox process creation event was captured using Sysmon Event ID 1 and analysed through Windows Event Viewer.
+![Scheduled Tasks](Screenshots/PowerShell/02-Scheduled-Tasks.jpg)
 
-Evidence location:
+Registered Antivirus Products
 
-----
+![Antivirus Products](Screenshots/PowerShell/04-Antivirus-Products.jpg)
 
-MITRE ATT&CK mapping:
+Service Events
 
-- T1059 - Command and Scripting Interpreter
-- T1106 - Native API
+![Service Events](Screenshots/PowerShell/05-Service-Events.jpg)
 
-----
+---
 
-## Evidence Screenshots
+### Windows System Repair
 
-### Sysmon Event ID 1 - Process Creation
+DISM Repair
 
-![Sysmon Event ID 1](Evidence/Sysmon/Screenshots/sysmon-event-id-1.png)
+![DISM](Screenshots/SFC-DISM/01-DISM-RestoreHealth.jpg)
 
-### Sysmon Process Creation Investigation
+SFC Validation
 
-![Sysmon Process Creation](Evidence/Sysmon/Screenshots/sysmon-process-create.png)
+![SFC](Screenshots/SFC-DISM/02-SFC-Scan.jpg)
+
+---
+
+### Recovery
+
+Restore Point Created
+
+![Restore Point](Screenshots/Restore-Point/01-Restore-Point-List.jpg)
+
+System Protection
+
+![System Protection](Screenshots/Restore-Point/02-System-Protection.jpg)
 
 ----
 
